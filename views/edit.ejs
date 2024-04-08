@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Edit</h1>
+<form action="/update", method="POST">
+    <input type="hidden" name="index" value="<%= index %>"> <!-- Hidden input to pass the index -->
+    <input name="title" type="text" class="feedback-input" placeholder="Title" value="<%= post.title %>" />
+    <label for="content">Content:</label><br>
+    <textarea name="content" class="feedback-input" placeholder="Content"><%= post.content %></textarea>
+    <input type="submit" value="Update" />
+</form>
